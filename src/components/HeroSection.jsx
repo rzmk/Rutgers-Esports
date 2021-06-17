@@ -7,7 +7,7 @@ function renderJumbo({
     return (
         // this video is muted anyways so we don't need captions
         // eslint-disable-next-line jsx-a11y/media-has-caption
-        <video playsInline="playsInline" autoPlay="autoPlay" muted="muted" loop="loop">
+        <video playsInline="playsInline" autoPlay loop muted>
             <source src={sourceURL} type="video/mp4" />
         </video>
     );
