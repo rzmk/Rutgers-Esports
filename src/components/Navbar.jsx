@@ -4,6 +4,18 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import logosdata from '../data/logosdata';
 
+function appear(dropdownType) {
+    const dropdown = `dropdown-${dropdownType}`;
+    document.getElementById(dropdown).style.visibility = 'visible';
+    document.getElementById(dropdown).style.opacity = '1';
+}
+
+function disappear(dropdownType) {
+    const dropdown = `dropdown-${dropdownType}`;
+    document.getElementById(dropdown).style.visibility = 'hidden';
+    document.getElementById(dropdown).style.opacity = '0';
+}
+
 function Navbar() {
     return (
         <header>
@@ -23,13 +35,13 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link to="#" className="nav-link dropdown-toggle text-truncate" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('about')} id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 About
                             </Link>
-                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
-                                <Link to="/community" className="dropdown-item">Our Community</Link>
-                                <Link to="/competitive" className="dropdown-item">Competitive</Link>
-                                <Link to="/discord" className="dropdown-item">Discord</Link>
+                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-about" onMouseLeave={() => disappear('about')}>
+                                <Link to="/community" className="dropdown-item" onClick={() => disappear('about')}>Our Community</Link>
+                                <Link to="/competitive" className="dropdown-item" onClick={() => disappear('about')}>Competitive</Link>
+                                <Link to="/discord" className="dropdown-item" onClick={() => disappear('about')}>Discord</Link>
                             </div>
                         </li>
                         <li className="nav-item">
@@ -38,24 +50,24 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link to="#" className="nav-link dropdown-toggle text-truncate" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('clubs')} id="navbarDropdown-clubs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Clubs
                             </Link>
-                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
-                                <Link to="#" className="dropdown-item">Call of Duty</Link>
-                                <Link to="#" className="dropdown-item">CS:GO</Link>
-                                <Link to="#" className="dropdown-item">DotA 2</Link>
-                                <Link to="#" className="dropdown-item">Fighting Games Community (FGC)</Link>
-                                <Link to="#" className="dropdown-item">Hearthstone</Link>
-                                <Link to="#" className="dropdown-item">League of Legends</Link>
-                                <Link to="#" className="dropdown-item">Overwatch/Valorant</Link>
-                                <Link to="#" className="dropdown-item">Pokemon</Link>
-                                <Link to="#" className="dropdown-item">Rainbow 6 Siege</Link>
-                                <Link to="#" className="dropdown-item">Rhythm Games Club (RGC)</Link>
-                                <Link to="#" className="dropdown-item">Rocket League</Link>
-                                <Link to="#" className="dropdown-item">Smash Melee</Link>
-                                <Link to="#" className="dropdown-item">Smash Ultimate</Link>
-                                <Link to="#" className="dropdown-item">Women&apos;s Gaming League</Link>
+                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-clubs" onMouseLeave={() => disappear('clubs')}>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Call of Duty</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>CS:GO</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>DotA 2</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Fighting Games Community (FGC)</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Hearthstone</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>League of Legends</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Overwatch/Valorant</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Pokemon</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Rainbow 6 Siege</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Rhythm Games Club (RGC)</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Rocket League</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Smash Melee</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Smash Ultimate</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Women&apos;s Gaming League</Link>
                             </div>
                         </li>
                         <li className="nav-item">

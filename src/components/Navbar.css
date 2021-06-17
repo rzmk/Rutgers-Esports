@@ -74,6 +74,13 @@
         visibility:visible;
         top:100%;
     }
+
+    /* .nav-item .dropdown-menu:hover {
+        transition: .2s;
+        opacity:0;
+        visibility: hidden;
+        top:100%;
+    } */
 }
 
 @media (max-width: 991.98px) {
