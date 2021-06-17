@@ -10,6 +10,13 @@ function appear(dropdownType) {
     document.getElementById(dropdown).style.opacity = '1';
 }
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+};
+
 function disappear(dropdownType) {
     const dropdown = `dropdown-${dropdownType}`;
     document.getElementById(dropdown).style.visibility = 'hidden';
@@ -30,58 +37,58 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link to="/" className="nav-link">
+                            <Link to="/" className="nav-link" onClick={scrollToTop}>
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('about')} id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('about')} id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={scrollToTop}>
                                 About
                             </Link>
                             <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-about" onMouseLeave={() => disappear('about')}>
-                                <Link to="/community" className="dropdown-item" onClick={() => disappear('about')}>Our Community</Link>
-                                <Link to="/competitive" className="dropdown-item" onClick={() => disappear('about')}>Competitive</Link>
-                                <Link to="/discord" className="dropdown-item" onClick={() => disappear('about')}>Discord</Link>
+                                <Link to="/community" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Our Community</Link>
+                                <Link to="/competitive" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Competitive</Link>
+                                <Link to="/discord" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Discord</Link>
                             </div>
                         </li>
                         <li className="nav-item">
-                            <Link to="#" className="nav-link">
+                            <Link to="#" className="nav-link" onClick={scrollToTop}>
                                 Blog
                             </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('clubs')} id="navbarDropdown-clubs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('clubs')} id="navbarDropdown-clubs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={scrollToTop}>
                                 Clubs
                             </Link>
                             <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-clubs" onMouseLeave={() => disappear('clubs')}>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Call of Duty</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>CS:GO</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>DotA 2</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Fighting Games Community (FGC)</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Hearthstone</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>League of Legends</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Overwatch/Valorant</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Pokemon</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Rainbow 6 Siege</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Rhythm Games Club (RGC)</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Rocket League</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Smash Melee</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Smash Ultimate</Link>
-                                <Link to="#" className="dropdown-item" onClick={() => disappear('clubs')}>Women&apos;s Gaming League</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Call of Duty</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>CS:GO</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>DotA 2</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Fighting Games Community (FGC)</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Hearthstone</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>League of Legends</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Overwatch/Valorant</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Pokemon</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Rainbow 6 Siege</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Rhythm Games Club (RGC)</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Rocket League</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Smash Melee</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Smash Ultimate</Link>
+                                <Link to="#" className="dropdown-item" onClick={() => { disappear('clubs'); scrollToTop(); }}>Women&apos;s Gaming League</Link>
                             </div>
                         </li>
                         <li className="nav-item">
-                            <Link to="#" className="nav-link">
+                            <Link to="#" className="nav-link" onClick={scrollToTop}>
                                 Teams
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="#" className="nav-link">
+                            <Link to="#" className="nav-link" onClick={scrollToTop}>
                                 Events
                             </Link>
                         </li>
                         <li className="nav-item text-truncate">
-                            <Link to="#" className="nav-link">
+                            <Link to="#" className="nav-link" onClick={scrollToTop}>
                                 Contact
                             </Link>
                         </li>
