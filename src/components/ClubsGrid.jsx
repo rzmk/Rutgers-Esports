@@ -72,24 +72,24 @@ function ClubsGrid() {
                                 <div className="socialsBar">
                                     <SocialsBar flow="row-reverse" socials={clubPop.socials} />
                                 </div>
-                                <div className="info container">
+                                <div className="info container px-0 mx-auto w-100 pb-4">
 
                                     <div className="row">
-                                        <div className="meetings col-md-4 col-sm-12">
-                                            <h6> Founded </h6>
-                                            <p> 2021 - Kevin Cubillos </p>
-                                            <h6> Meeting Times </h6>
-                                            <p>
+                                        <div className="meetings col-6 col-md-4 col-sm-12 px-2 mx-auto pt-0 mt-0">
+                                            <h6 style={{ fontSize: '1.25rem' }}> Founded </h6>
+                                            <p style={{ fontSize: '1.25rem' }}> 2021 - Kevin Cubillos </p>
+                                            <h6 style={{ fontSize: '1.25rem' }}> Meeting Times </h6>
+                                            <p style={{ fontSize: '1.25rem' }}>
                                                 {' '}
                                                 {clubPop.meeting}
                                             </p>
-                                            <h6> Location </h6>
-                                            <p>
+                                            <h6 style={{ fontSize: '1.25rem' }}> Location </h6>
+                                            <p style={{ fontSize: '1.25rem' }}>
                                                 {' '}
                                                 {clubPop.location}
                                             </p>
                                         </div>
-                                        <div className="about col-md-8 col-sm-12">
+                                        <div className="about col-6 col-md-8 col-sm-12 px-2 mx-auto">
                                             <h5>
                                                 About
                                             </h5>

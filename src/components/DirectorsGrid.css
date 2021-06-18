@@ -1,0 +1,329 @@
+body {
+    box-sizing: border-box;
+  }
+  
+  .section-container {
+    padding-bottom: 2rem;
+  }
+  
+  .section-container a:hover {
+    text-decoration: none;
+  }
+  
+  .title {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .title::after {
+    content: "";
+    display: block;
+    margin: 0 auto 0;
+    border-bottom: solid #c94949;
+    width: 4rem;
+  }
+  
+  .grid-container {
+    position: relative;
+    width: 50rem;
+    height: auto;
+    background-color: #1d1d1d;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .orgContainer {
+    cursor: pointer;
+  }
+  
+  .orgTab {
+    position: relative;
+    border-width: 6px;
+    border-color: rgb(51, 51, 51);
+    border-style: solid;
+    background-color: #1d1d1d;
+    justify-content: center;
+    color: rgb(0, 0, 0, 0);
+    height: 11.375rem;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    resize: vertical;
+    background-size: 65%, 65%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+  }
+  
+  .orgTab p {
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    font-size: 1,6rem;
+    font-weight: 700;
+    padding: 1rem;
+  }
+  
+  .orgTab:hover {
+    border-color: rgb(201, 73, 73);
+    color: rgb(201, 73, 73);
+    background-size: 0%, 0%;
+  }
+  
+  .exitPop {
+    position: absolute;
+    left: 67.5%;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .exitPop:hover {
+    color: rgb(201, 73, 73);
+    cursor: pointer;
+  }
+  
+  .popUpBackground {
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 2rem;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+  }
+  
+  .filler {
+    z-index: 1;
+    width: 23vw;
+    resize: vertical;
+  }
+  
+  .popUpBackground::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .popUpContainer {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+  
+  .orgTitle {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #1d1d1d;
+  }
+  
+  .orgTitle p {
+    margin-top: 1rem;
+  }
+  .orgTitle::after {
+    content: "";
+    display: block;
+    margin: 0 auto 1rem;
+    border-bottom: solid #c94949;
+    width: 4rem;
+  }
+  
+  .orgPicture {
+    position: relative;
+    width: 100%;
+    max-height: 65vh;
+  }
+  
+  .popUpBody {
+    background-color: #1d1d1d;
+    width: 100%;
+    font-size: large;
+    text-align: center;
+    color: white;
+  
+    padding: 3rem 10% 5rem;
+  }
+  
+  .socialsBar {
+    float: right;
+    width: 100%;
+  }
+  
+  .peopleContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #1d1d1d;
+    padding: 0;
+  }
+  
+  .peopleTitle {
+    display: none;
+  }
+  
+  .personTab {
+    position: relative;
+    background-color: #c94949;
+    background-image: url("/Pictures/Clubs/People/noPic.png");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    justify-content: center;
+    color: rgb(0, 0, 0, 0);
+    width: 100%;
+    height: 16vw;
+    resize: vertical;
+  }
+
+  .personBox:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  }
+  
+  .personName {
+    text-align: left;
+    font-weight: 500;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25vw;
+  }
+  
+  .personRole {
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: rgb(145, 145, 145);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow-wrap: normal;
+    font-size: 1vw;
+  }
+  
+  .info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .about {
+    text-align: left;
+  }
+  
+  .meetings {
+    text-align: left;
+  }
+  
+  .meetings p {
+    font-size: 0.8rem;
+  }
+  .meetings h6 {
+    color: rgb(151, 151, 151);
+    margin-bottom: 0;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .grid-container {
+      width: 35rem;
+    }
+  
+    .orgTab {
+      height: 10.6661rem;
+    }
+    .orgTab p {
+      margin: 0;
+      text-align: center;
+      font-size: 17px !important;
+      font-weight: 800;
+    }
+  
+    .popUpContainer {
+      width: 70vw;
+    }
+  
+    .personTab {
+      height: 26vw;
+    }
+  
+    .personName {
+      font-size: 2.5vw;
+    }
+  
+    .personRole {
+      font-size: 2vw;
+    }
+  
+    .peopleTitle {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .about {
+      text-align: center;
+    }
+    .about p {
+      font-size: 1rem;
+    }
+  
+    .meetings {
+      text-align: center;
+    }
+  
+    .exitPop {
+      font-size: 0.75rem;
+    }
+  
+    .orgTitle {
+      font-size: 1.5rem;
+      padding-top: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      text-align: center;
+    }
+
+    .about p {
+      margin-top: 2rem;
+    }
+
+    .grid-container {
+      width: 80vw;
+    }
+  
+    .orgTab {
+      height: 42vw;
+    }
+    
+    .about p {
+      font-size: 1rem;
+    }
+
+    .personTab {
+      height: 30vh;
+    }
+
+    .personName {
+      font-size: 1.5rem;
+    }
+
+    .personRole {
+      font-size: 1rem;
+    }
+  }
+  

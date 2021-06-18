@@ -10,7 +10,7 @@ const Footer = () => (
                 <hr />
                 <div className="info">
                     <div className="left">
-                        <img className="logo" alt="Rutgers Esports Logo" src={logosdata.black.logo} />
+                        <img className="logo pr-4" alt="Rutgers Esports Logo" src={logosdata.black.logo} />
                         <div className="contact">
                             <div className="text-muted">ADDRESS</div>
                             613 George St. New Brunswick, NJ 08901

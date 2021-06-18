@@ -42,6 +42,10 @@ img {
     margin-left: 3rem;
 }
 
+.info div {
+    margin: auto;
+}
+
 .socials a {
     color: #ffffff;
     margin: 0 .8rem;

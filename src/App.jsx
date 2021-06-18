@@ -9,6 +9,7 @@ import HomePage from './components/HomePage';
 import Competitive from './components/Competitive';
 import Discord from './components/Discord';
 import Community from './components/Community';
+import Directors from './components/Directors';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/" exact component={HomePage} />
                 <Route path="/competitive" exact component={Competitive} />
                 <Route path="/community" exact component={Community} />
+                <Route path="/directors" exact component={Directors} />
                 <Route path="/discord" exact component={Discord} />
             </Switch>
             {/* <HeroSection />

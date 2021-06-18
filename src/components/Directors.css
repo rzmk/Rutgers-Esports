@@ -1,0 +1,81 @@
+h3 {
+    color: #919191;
+    letter-spacing: 0.1rem;
+}
+
+.section-container {
+    margin-top: 1.5rem;
+}
+
+.header-section {
+    width: 75%;
+    margin: auto;
+}
+
+.header {
+    position: relative;
+    margin: auto;
+}
+
+.socials {
+    align-self: center;
+    margin-right: auto;
+}
+
+.socials i {
+    float: right;
+    padding-left: 1rem;
+}
+
+
+.fa-facebook, .fa-twitter, .fa-twitch, .fa-discord, .fa-youtube, .fa-linkedin, .fa-instagram, .fa-github, .fa-envelope {transition: .3s;}
+
+.fa-facebook:hover {color: #4B5891;}
+.fa-twitter:hover {color: #3099E1;}
+.fa-twitch:hover {color: #70439C;}
+.fa-discord:hover {color: #7289DA;}
+.fa-youtube:hover {color: #CE2524;}
+.fa-linkedin:hover {color: #1673AB;}
+.fa-instagram:hover {color: #E1306C;}
+.fa-github:hover {color: #adadad;}
+.fa-envelope:hover {color: #E84438;}
+
+ul, li {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info {
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+.attribute-key {
+    color: #919191;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.attribute-value {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.about p {
+    font-size: 1.25rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .socials {
+        margin: 2rem 0;
+    }
+
+    .socials i {
+        float: none;
+        padding: 0;
+    }
+}

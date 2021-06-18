@@ -47,6 +47,7 @@ function Navbar() {
                             </Link>
                             <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-about" onMouseLeave={() => disappear('about')}>
                                 <Link to="/community" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Our Community</Link>
+                                <Link to="/directors" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Directors</Link>
                                 <Link to="/competitive" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Competitive</Link>
                                 <Link to="/discord" className="dropdown-item" onClick={() => { disappear('about'); scrollToTop(); }}>Discord</Link>
                             </div>
