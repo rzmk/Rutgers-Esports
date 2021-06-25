@@ -25,8 +25,8 @@ const ClubsInfo = ({ tab, people }) => {
     return (
         <div className="header col-12 col-md-8 col-xs-12 mt-5">
             <div className="header-section row mx-0">
-                <h1 className="col-8 px-0">{currentClub.currentClub}</h1>
-                <div className="socials col-4 col-md-4 col-xs-12">
+                <h1 className="col-6 px-0 text-nowrap">{currentClub.currentClub}</h1>
+                <div className="socials col-6 col-md-6 col-xs-12 align-items-center mr-0">
                     {Object.entries(people.socials).map(([key, value]) => (
                         // eslint-disable-next-line jsx-a11y/control-has-associated-label
                         <a href={`${value}`} target="_blank" rel="noreferrer"><i className={`fab fa-${key} fa-3x`} /></a>
