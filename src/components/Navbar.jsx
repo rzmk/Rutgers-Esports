@@ -28,8 +28,8 @@ const disappear = (dropdownType, club = '') => {
     document.getElementById(dropdown).style.opacity = '0';
     if (club !== '') {
         currentClub.currentClub = club;
-        scrollToTop();
     }
+    scrollToTop();
 };
 
 function Navbar() {
