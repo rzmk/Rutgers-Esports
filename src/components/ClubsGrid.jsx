@@ -46,18 +46,20 @@ function ClubsGrid() {
                             Filler
                         </div>
                         <div className="popUpContainer">
-                            <div
-                                className="exitPop"
-                                onClick={() => visibility(clubPop)}
-                                onKeyPress={() => visibility(clubPop)}
-                                role="button"
-                                tabIndex="0"
-                            >
-                                Exit Pop &nbsp;
-                                <i className="fas fa-times" />
-                            </div>
-                            <div className="orgTitle">
-                                <p>{clubPop.name}</p>
+                            <div className="popUpHeader row">
+                                <div
+                                    className="exitPop col-sm-12"
+                                    onClick={() => visibility(clubPop)}
+                                    onKeyPress={() => visibility(clubPop)}
+                                    role="button"
+                                    tabIndex="0"
+                                >
+                                    Exit Pop &nbsp;
+                                    <i className="fas fa-times" />
+                                </div>
+                                <div className="orgTitle col-12">
+                                    <p>{clubPop.name}</p>
+                                </div>
                             </div>
                             <div>
                                 <Carousel plugins={['infinite', { resolve: autoplayPlugin, options: { interval: 4000 } }]} animationSpeed={1000}>
@@ -76,17 +78,20 @@ function ClubsGrid() {
 
                                     <div className="row">
                                         <div className="meetings col-6 col-md-4 col-sm-12 px-2 mx-auto pt-0 mt-0">
-                                            <h6 style={{ fontSize: '1.25rem' }}> Founded </h6>
-                                            <p style={{ fontSize: '1.25rem' }}> 2021 - Kevin Cubillos </p>
-                                            <h6 style={{ fontSize: '1.25rem' }}> Meeting Times </h6>
-                                            <p style={{ fontSize: '1.25rem' }}>
+                                            <h6> Founded </h6>
+                                            <p>
                                                 {' '}
-                                                {clubPop.meeting}
+                                                {clubPop.attributes.founded}
                                             </p>
-                                            <h6 style={{ fontSize: '1.25rem' }}> Location </h6>
-                                            <p style={{ fontSize: '1.25rem' }}>
+                                            <h6> Meeting Times </h6>
+                                            <p>
                                                 {' '}
-                                                {clubPop.location}
+                                                {clubPop.attributes.meeting}
+                                            </p>
+                                            <h6> Location </h6>
+                                            <p>
+                                                {' '}
+                                                {clubPop.attributes.location}
                                             </p>
                                         </div>
                                         <div className="about col-6 col-md-8 col-sm-12 px-2 mx-auto">

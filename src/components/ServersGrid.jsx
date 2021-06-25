@@ -6,8 +6,8 @@ import clubs from '../data/clubsdata';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 function getDiscordLinkHREF(socials) {
-    const maybeDiscordLink = socials.find((s) => s.type === 'discord');
-    if (maybeDiscordLink) return { href: maybeDiscordLink.link };
+    const maybeDiscordLink = socials.discord;
+    if (maybeDiscordLink) return { href: maybeDiscordLink };
     return {};
 }
 

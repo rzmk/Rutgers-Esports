@@ -73,12 +73,12 @@
 }
 
 .mailchimpContainer {
-  color: rgb(255, 224, 27);
-  border-color: rgb(255, 224, 27);
+  color: rgb(255, 180, 160);
+  border-color: rgb(255, 180, 160);
 }
 
 .mailchimpContainer:hover {
-  background-color: rgb(255, 224, 27);
+  background-color: rgb(255, 180, 160);
 }
 
 .instagramContainer {
@@ -96,6 +96,18 @@
     #285aeb 90%
   );
 }
+
+.fa-facebook, .fa-twitter, .fa-twitch, .fa-discord, .fa-youtube, .fa-linkedin, .fa-instagram, .fa-github, .fa-envelope {transition: .3s;}
+
+.fa-facebook:hover {color: #4B5891;}
+.fa-twitter:hover {color: #3099E1;}
+.fa-twitch:hover {color: #70439C;}
+.fa-discord:hover {color: #7289DA;}
+.fa-youtube:hover {color: #CE2524;}
+.fa-linkedin:hover {color: #1673AB;}
+.fa-instagram:hover {color: #E1306C;}
+.fa-github:hover {color: #adadad;}
+.fa-envelope:hover {color: #E84438;}
 
 @media screen and (max-width: 580px) {
   .socContainer {

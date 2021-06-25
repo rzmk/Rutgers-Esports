@@ -1,17 +1,15 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import './Socials.css';
 
-function SocialsBar({ flow, socials }) {
+function SocialsBar({ socials }) {
     return (
-        <div className="socialsContainer" style={{ flexDirection: flow }}>
-            {socials.map((social) => (
-                <a href={social.link} target="_blank" rel="noopener noreferrer">
-                    <div className={`${social.type}Container socContainer`}>
-
-                        <i className={`fab fa-${social.type}${social.type === 'facebook' ? '-f' : ''}`} />
-
-                    </div>
-                </a>
+        <div>
+            {socials && Object.entries(socials).map(([key, value]) => (
+                // eslint-disable-next-line jsx-a11y/control-has-associated-label
+                <span className="socials">
+                    <a href={`${value}`} target="_blank" rel="noreferrer"><i className={`fab fa-${key} fa-3x`} /></a>
+                </span>
             ))}
         </div>
 

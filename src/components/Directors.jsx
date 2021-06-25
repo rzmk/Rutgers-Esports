@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeroSection from './HeroSection';
-import DirectorsGrid from './DirectorsGrid';
+import PersonInfo from './PersonInfo';
+import PersonPageGrid from './PersonPageGrid';
 import directors from '../data/directorsdata';
 import './Directors.css';
+import isClubPage from './isClubPage';
 
 function Directors() {
     const {
@@ -14,6 +16,22 @@ function Directors() {
         videoSourceURL: '/Videos/homepage-video.mp4',
     };
 
+    const [currPerson, setCurrPerson] = useState(directors.directors[0]);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    const changePerson = (person) => {
+        setCurrPerson(person);
+        scrollToTop();
+    };
+
+    isClubPage.isClubPage = false;
+
     return (
         <>
             <HeroSection
@@ -22,7 +40,8 @@ function Directors() {
                 description={description}
                 videoSourceURL={videoSourceURL}
             />
-            <DirectorsGrid people={directors.directors} />
+            <PersonInfo person={currPerson} />
+            <PersonPageGrid title="MEET OUR DIRECTORS" people={directors.directors} changePerson={changePerson} />
         </>
     );
 }

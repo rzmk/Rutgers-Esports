@@ -75,8 +75,7 @@ body {
 }
 
 .exitPop {
-  position: absolute;
-  left: 67.5%;
+  position: relative;
   padding-top: 1.5rem;
   font-size: 1.5rem;
   color: white;
@@ -124,6 +123,10 @@ body {
   z-index: 2;
 }
 
+p, h6 {
+  font-size: 1.25rem;
+}
+
 .orgTitle {
   width: 100%;
   font-size: 2rem;
@@ -131,6 +134,7 @@ body {
   text-align: center;
   color: white;
   background-color: #1d1d1d;
+  text-transform: uppercase;
 }
 
 .orgTitle p {
@@ -156,7 +160,6 @@ body {
   font-size: large;
   text-align: center;
   color: white;
-
   padding: 3rem 10% 5rem;
 }
 
@@ -229,9 +232,11 @@ body {
 .meetings {
   text-align: left;
 }
+
 .meetings p {
-  font-size: 0.8rem;
+  font-size: 1.25rem;
 }
+
 .meetings h6 {
   color: rgb(151, 151, 151);
   margin-bottom: 0;
@@ -285,7 +290,7 @@ body {
   }
 
   .exitPop {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
   }
 
   .orgTitle {

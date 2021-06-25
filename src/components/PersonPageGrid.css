@@ -74,11 +74,13 @@ body {
   
   .exitPop {
     position: absolute;
-    left: 67.5%;
+    left: 62.5%;
+    top: 2.5rem;
     padding-top: 1.5rem;
     font-size: 1.5rem;
     color: white;
     transition: 0.5s;
+    z-index: 2;
   }
   
   .exitPop:hover {
@@ -97,6 +99,7 @@ body {
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: none;
     display: flex;
   }
@@ -169,6 +172,7 @@ body {
     height: auto;
     background-color: #1d1d1d;
     padding: 0;
+    cursor: pointer;
   }
   
   .peopleTitle {
@@ -227,13 +231,28 @@ body {
   .meetings {
     text-align: left;
   }
-  
-  .meetings p {
-    font-size: 0.8rem;
-  }
+
   .meetings h6 {
     color: rgb(151, 151, 151);
     margin-bottom: 0;
+  }
+
+  .tab-text {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .tab-text:hover {
+    color: #fff;
+    border-bottom: 3px solid #C94949;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+  }
+
+  .tab-active {
+    border-bottom: 3px solid #C94949;
   }
   
   @media screen and (max-width: 960px) {
@@ -284,13 +303,25 @@ body {
     }
   
     .exitPop {
-      font-size: 0.75rem;
+      font-size: 1.25rem;
+      left: 20%;
     }
   
     .orgTitle {
       font-size: 1.5rem;
       padding-top: 2rem;
     }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .clubButton:hover {
+      color: #fff;
+      border-bottom: 3px solid #C94949;
+      transition: all 0.2s ease-out;
+  }
   }
   
   @media screen and (max-width: 600px) {

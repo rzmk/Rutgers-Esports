@@ -35,7 +35,7 @@ function HeroSection({
     const { url, alt } = imageProps === undefined ? { url: null, alt: null } : imageProps;
 
     return (
-        <div className="jumbotron jumbotron-fluid vertical-center">
+        <div className="jumbotron jumbotron-fluid vertical-center mt-0">
             {displayVideo ? renderJumbo({
                 sourceURL: videoSourceURL,
             }) : null}
