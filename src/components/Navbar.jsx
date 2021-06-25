@@ -27,9 +27,11 @@ const disappear = (dropdownType, club = '') => {
     document.getElementById(dropdown).style.visibility = 'hidden';
     document.getElementById(dropdown).style.opacity = '0';
     if (club !== '') {
-        currentClub.currentClub = club;
+        if (club !== 'noscroll') {
+            currentClub.currentClub = club;
+            scrollToTop();
+        }
     }
-    scrollToTop();
 };
 
 function Navbar() {
@@ -54,11 +56,11 @@ function Navbar() {
                             <Link to="#" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('about')} id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={scrollToTop}>
                                 About
                             </Link>
-                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-about" onMouseLeave={() => disappear('about')}>
-                                <Link to="/community" className="dropdown-item" onClick={() => { disappear('about'); }}>Our Community</Link>
-                                <Link to="/directors" className="dropdown-item" onClick={() => { disappear('about'); }}>Directors</Link>
-                                <Link to="/competitive" className="dropdown-item" onClick={() => { disappear('about'); }}>Competitive</Link>
-                                <Link to="/discord" className="dropdown-item" onClick={() => { disappear('about'); }}>Discord</Link>
+                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-about" onMouseLeave={() => disappear('about', 'noscroll')}>
+                                <Link to="/community" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Our Community</Link>
+                                <Link to="/directors" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Directors</Link>
+                                <Link to="/competitive" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Competitive</Link>
+                                <Link to="/discord" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Discord</Link>
                             </div>
                         </li>
                         <li className="nav-item">
@@ -70,7 +72,7 @@ function Navbar() {
                             <Link to="/clubs" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('clubs')} id="navbarDropdown-clubs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={() => { scrollToTop(); redirect('clubs'); }}>
                                 Clubs
                             </Link>
-                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-clubs" onMouseLeave={() => disappear('clubs')}>
+                            <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-clubs" onMouseLeave={() => disappear('clubs', 'noscroll')}>
                                 <Link to="/clubs" className="dropdown-item" onClick={() => disappear('clubs', 'Call of Duty')}>Call of Duty</Link>
                                 <Link to="/clubs" className="dropdown-item" onClick={() => disappear('clubs', 'CS:GO')}>CS:GO</Link>
                                 <Link to="/clubs" className="dropdown-item" onClick={() => disappear('clubs', 'DotA 2')}>DotA 2</Link>
