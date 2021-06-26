@@ -242,6 +242,10 @@ p, h6 {
   margin-bottom: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 960px) {
   .grid-container {
     width: 35rem;

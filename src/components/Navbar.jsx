@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logosdata from '../data/logosdata';
 import currentClub from './CurrentClub';
+import isClubPage from './isClubPage';
 
 const appear = (dropdownType) => {
     const dropdown = `dropdown-${dropdownType}`;
@@ -35,6 +36,11 @@ const disappear = (dropdownType, club = '') => {
 };
 
 function Navbar() {
+    const path = useLocation().pathname;
+    if (path !== '/clubs') {
+        isClubPage.isClubPage = false;
+    }
+
     return (
         <header>
             <nav className="navbar navbar-expand-lg fixed-top">
@@ -57,10 +63,10 @@ function Navbar() {
                                 About
                             </Link>
                             <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-about" onMouseLeave={() => disappear('about', 'noscroll')}>
-                                <Link to="/community" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Our Community</Link>
-                                <Link to="/directors" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Directors</Link>
-                                <Link to="/competitive" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Competitive</Link>
-                                <Link to="/discord" className="dropdown-item" onClick={() => { disappear('about', 'noscroll'); }}>Discord</Link>
+                                <Link to="/community" className="dropdown-item" onClick={() => { disappear('about', 'Community'); }}>Our Community</Link>
+                                <Link to="/directors" className="dropdown-item" onClick={() => { disappear('about', 'Directors'); }}>Directors</Link>
+                                <Link to="/competitive" className="dropdown-item" onClick={() => { disappear('about', 'Competitive'); }}>Competitive</Link>
+                                <Link to="/discord" className="dropdown-item" onClick={() => { disappear('about', 'Discord'); }}>Discord</Link>
                             </div>
                         </li>
                         <li className="nav-item">

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react';
 import HeroSection from './HeroSection';
 import PersonPageGrid from './PersonPageGrid';
@@ -5,9 +6,9 @@ import ClubsInfo from './ClubsInfo';
 import PersonInfo from './PersonInfo';
 import clubs from '../data/clubsdata';
 import ClubsGrid from './ClubsGrid';
-import './Directors.css';
 import currentClub from './CurrentClub';
 import isClubPage from './isClubPage';
+import './Grid.css';
 
 function Clubs() {
     const {
@@ -19,12 +20,6 @@ function Clubs() {
         videoSourceURL: '/Videos/homepage-video.mp4',
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
     isClubPage.isClubPage = true;
 
     const [currPerson, setCurrPerson] = useState({});
@@ -48,9 +43,8 @@ function Clubs() {
     const [currTab, setCurrTab] = useState('about');
 
     const changePerson = (person) => {
+        setCurrTab('e-board');
         setCurrPerson(person);
-        console.log(person);
-        scrollToTop();
     };
 
     const changeTab = (tabName) => {
@@ -68,11 +62,11 @@ function Clubs() {
                 description={description}
                 videoSourceURL={videoSourceURL}
             />
-            <ClubsInfo tab={changeTab} people={currClub} />
+            <ClubsInfo tab={changeTab} people={currClub} currTab={currTab} />
             {currTab === 'about' && <PersonInfo person={currClub} />}
             {currTab === 'e-board' && <PersonInfo person={currPerson} />}
             <PersonPageGrid title={clubTitle} people={clubPeople} changePerson={changePerson} />
-            <ClubsGrid />
+            <a href="#heading"><ClubsGrid className="clubs-grid" /></a>
         </>
     );
 }

@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
     box-sizing: border-box;
   }
@@ -322,6 +325,9 @@ body {
       border-bottom: 3px solid #C94949;
       transition: all 0.2s ease-out;
   }
+  }
+  #heading {
+    scroll-margin-top: 100px;
   }
   
   @media screen and (max-width: 600px) {

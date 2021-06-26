@@ -3,7 +3,7 @@ import logosdata from '../data/logosdata';
 import './Footer.css';
 
 const Footer = () => (
-    <wrapper className="d-flex flex-column">
+    <div className="d-flex flex-column">
         <main className="flex-fill" />
         <footer className="pb-5">
             <div className="container">
@@ -54,7 +54,7 @@ const Footer = () => (
                 </div>
             </div>
         </footer>
-    </wrapper>
+    </div>
 );
 
 export default Footer;

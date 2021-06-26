@@ -15,18 +15,20 @@ function PersonPageGrid({ title, people, changePerson }) {
                 {people.map((person) => (
                     <Grid item xs={8} sm={4} md={4}>
                         <div>
-                            <div className="peopleContainer personTab personBox" onClick={() => changePerson(person)} style={{ position: 'relative', zIndex: 0 }}>
-                                <div style={{ bottom: '0%', position: 'absolute', zIndex: 1 }}>
-                                    <p className="personName">
-                                        {' '}
-                                        {person.name}
-                                    </p>
-                                    <p className="personRole">
-                                        {' '}
-                                        {person.role}
-                                    </p>
+                            <a href="#heading">
+                                <div className="peopleContainer personTab personBox" onClick={() => changePerson(person)} style={{ position: 'relative', zIndex: 0 }}>
+                                    <div style={{ bottom: '0%', position: 'absolute', zIndex: 1 }}>
+                                        <p className="personName">
+                                            {' '}
+                                            {person.name}
+                                        </p>
+                                        <p className="personRole">
+                                            {' '}
+                                            {person.role}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </Grid>
                 ))}

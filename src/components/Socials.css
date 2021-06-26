@@ -97,7 +97,7 @@
   );
 }
 
-.fa-facebook, .fa-twitter, .fa-twitch, .fa-discord, .fa-youtube, .fa-linkedin, .fa-instagram, .fa-github, .fa-envelope {transition: .3s;}
+.fa-facebook, .fa-twitter, .fa-twitch, .fa-discord, .fa-youtube, .fa-linkedin, .fa-instagram, .fa-github, .fa-mailchimp, .fa-envelope {transition: .3s;}
 
 .fa-facebook:hover {color: #4B5891;}
 .fa-twitter:hover {color: #3099E1;}
@@ -107,6 +107,7 @@
 .fa-linkedin:hover {color: #1673AB;}
 .fa-instagram:hover {color: #E1306C;}
 .fa-github:hover {color: #adadad;}
+.fa-mailchimp:hover {color: #FFB4A0;}
 .fa-envelope:hover {color: #E84438;}
 
 @media screen and (max-width: 580px) {

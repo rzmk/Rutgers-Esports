@@ -7,6 +7,8 @@ import './Grid.css';
 import './Socials.css';
 import clubs from '../data/clubsdata';
 import '@brainhubeu/react-carousel/lib/style.css';
+import isClubPage from './isClubPage';
+import currentClub from './CurrentClub';
 
 function ClubsGrid() {
     const [clubPop, setClubPop] = useState({});
@@ -27,6 +29,14 @@ function ClubsGrid() {
             setVisible(true);
             setClubPop(club);
             scrollToTop();
+        }
+    };
+
+    const handleClick = (club) => {
+        if (!isClubPage.isClubPage) {
+            visibility(club);
+        } else {
+            currentClub.currentClub = club.name;
         }
     };
 
@@ -76,8 +86,8 @@ function ClubsGrid() {
                                 </div>
                                 <div className="info container px-0 mx-auto w-100 pb-4">
 
-                                    <div className="row">
-                                        <div className="meetings col-6 col-md-4 col-sm-12 px-2 mx-auto pt-0 mt-0">
+                                    <div className="row flex">
+                                        <div className="meetings col-12 col-md-6 col-sm px-2 mx-auto pt-0 mt-0 ml-0 mr-0">
                                             <h6> Founded </h6>
                                             <p>
                                                 {' '}
@@ -94,7 +104,7 @@ function ClubsGrid() {
                                                 {clubPop.attributes.location}
                                             </p>
                                         </div>
-                                        <div className="about col-6 col-md-8 col-sm-12 px-2 mx-auto">
+                                        <div className="about col-12 col-md-6 col-sm px-2 mx-auto">
                                             <h5>
                                                 About
                                             </h5>
@@ -130,7 +140,7 @@ function ClubsGrid() {
                                     <div
                                         className="orgTab"
                                         style={{ backgroundImage: `url(${club.logo})` }}
-                                        onClick={() => visibility(club)}
+                                        onClick={() => handleClick(club)}
                                         onKeyPress={() => visibility(club)}
                                         role="button"
                                         tabIndex="0"

@@ -7,14 +7,14 @@ function PersonInfo({ person }) {
         <div className="section-container">
             <div className="header-section col-8 row">
                 <div className="header col-12 col-md-8 col-xs-12 mt-0 mx-0 px-0">
-                    <h1>{!person.logo && person.name}</h1>
+                    <h1 id="heading">{!person.logo && person.name}</h1>
                     <h3>{person.role && person.role}</h3>
                 </div>
                 {/* <SocialsBar socials={person.socials} /> */}
                 <div className="socials col-12 col-md-4 col-xs-12 mx-0 px-0">
                     {!isClubPage.isClubPage && Object.entries(person.socials).map(([key, value]) => (
                         // eslint-disable-next-line jsx-a11y/control-has-associated-label
-                        <a href={`${value}`} target="_blank" rel="noreferrer"><i className={`fab fa-${key} fa-3x`} /></a>
+                        <a href={`${value}`} target="_blank" rel="noopener noreferrer"><i className={`fab fa-${key} fa-3x`} /></a>
                     ))}
                 </div>
             </div>
