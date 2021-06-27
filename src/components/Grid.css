@@ -16,7 +16,7 @@ body {
   color: white;
   text-align: center;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   font-weight: 600;
 }
 
@@ -75,11 +75,14 @@ body {
 }
 
 .exitPop {
-  position: relative;
+  position: absolute;
+  left: 62.5%;
+  top: 2.5rem;
   padding-top: 1.5rem;
   font-size: 1.5rem;
   color: white;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .exitPop:hover {
@@ -98,13 +101,14 @@ body {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
   display: flex;
 }
 
 .filler {
   z-index: 1;
-  width: 23vw;
+  width: 10vw;
   resize: vertical;
 }
 
@@ -166,6 +170,7 @@ p, h6 {
 .socialsBar {
   float: right;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 .peopleContainer {
@@ -183,21 +188,21 @@ p, h6 {
   margin-bottom: 2rem;
 }
 
-.personTab {
-  position: relative;
-  background-color: #c94949;
-  background-image: url("/Pictures/Clubs/People/noPic.png");
-  background-size: 100%, 100%;
-  background-repeat: no-repeat;
-  background-position: center, center;
-  justify-content: center;
-  color: rgb(0, 0, 0, 0);
-  width: 100%;
-  height: 12vw;
-  resize: vertical;
-}
+  .personTab {
+    position: relative;
+    background-color: #c94949;
+    background-image: url("/Pictures/Clubs/People/noPic.png");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    justify-content: center;
+    color: rgb(0, 0, 0, 0);
+    width: 100%;
+    height: 16vw;
+    resize: vertical;
+  }
 
-.personBox:hover {
+.personTab:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 
@@ -244,6 +249,38 @@ p, h6 {
 
 a:hover {
   text-decoration: none;
+}
+
+.tab-text {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tab-text:hover {
+  color: #fff;
+  border-bottom: 3px solid #C94949;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.tab-active {
+  border-bottom: 3px solid #C94949;
+}
+
+#heading {
+  scroll-margin-top: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .popUpContainer {
+    width: 70vw;
+  }
+
+  .exitPop {
+    left: 67.5%;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -294,7 +331,9 @@ a:hover {
   }
 
   .exitPop {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+    left: 62.5%;
   }
 
   .orgTitle {
@@ -310,5 +349,15 @@ a:hover {
 
   .orgTab {
     height: 42vw;
+  }
+
+  .personName, .personRole {
+    font-size: 0.75rem;
+  }
+
+  .exitPop {
+    font-size: 1rem;
+    padding-top: 2.1rem;
+    left: 60%;
   }
 }
