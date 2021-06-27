@@ -39,6 +39,8 @@ function Navbar() {
     const path = useLocation().pathname;
     if (path !== '/clubs') {
         isClubPage.isClubPage = false;
+    } else {
+        isClubPage.isClubPage = true;
     }
 
     return (

@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from 'react';
-import './PersonPageGrid.css';
 import currentClub from './CurrentClub';
-import isClubPage from './isClubPage';
 
 const ClubsInfo = ({ tab, people, currTab }) => {
     const [aboutTab, setAboutTab] = useState('tab-text tab-active');
@@ -11,12 +9,10 @@ const ClubsInfo = ({ tab, people, currTab }) => {
     const selectTab = (selectedTab) => {
         if (selectedTab === 'about') {
             tab('about');
-            isClubPage.isClubPage = true;
             setAboutTab('tab-text tab-active');
             setEboardTab('tab-text');
         } else {
             tab('e-board');
-            isClubPage.isClubPage = true;
             setAboutTab('tab-text');
             setEboardTab('tab-text tab-active');
         }

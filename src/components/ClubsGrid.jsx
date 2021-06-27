@@ -84,10 +84,10 @@ function ClubsGrid() {
                                 <div className="socialsBar">
                                     <SocialsBar flow="row-reverse" socials={clubPop.socials} />
                                 </div>
-                                <div className="info container px-0 mx-auto w-100 pb-4">
+                                <div className="info container px-0 pt-2 mx-auto w-100 pb-4">
 
                                     <div className="row flex">
-                                        <div className="meetings col-12 col-md-6 col-sm px-2 mx-auto pt-0 mt-0 ml-0 mr-0">
+                                        <div className="meetings col-12 col-md-4 col-sm px-2 mx-auto pt-0 mt-0 ml-0 mr-0">
                                             <h6> Founded </h6>
                                             <p>
                                                 {' '}
@@ -104,7 +104,7 @@ function ClubsGrid() {
                                                 {clubPop.attributes.location}
                                             </p>
                                         </div>
-                                        <div className="about col-12 col-md-6 col-sm px-2 mx-auto">
+                                        <div className="about col-12 col-md-8 col-sm px-2 mx-auto">
                                             <h5>
                                                 About
                                             </h5>

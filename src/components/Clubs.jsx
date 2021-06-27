@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react';
 import HeroSection from './HeroSection';
-import PersonPageGrid from './PersonPageGrid';
+import PersonGrid from './PersonGrid';
 import ClubsInfo from './ClubsInfo';
 import PersonInfo from './PersonInfo';
 import clubs from '../data/clubsdata';
 import ClubsGrid from './ClubsGrid';
 import currentClub from './CurrentClub';
-import isClubPage from './isClubPage';
 import './Grid.css';
 
 function Clubs() {
@@ -19,8 +18,6 @@ function Clubs() {
         description: '',
         videoSourceURL: '/Videos/homepage-video.mp4',
     };
-
-    isClubPage.isClubPage = true;
 
     const [currPerson, setCurrPerson] = useState({});
     let currClub = {};
@@ -65,7 +62,7 @@ function Clubs() {
             <ClubsInfo tab={changeTab} people={currClub} currTab={currTab} />
             {currTab === 'about' && <PersonInfo person={currClub} />}
             {currTab === 'e-board' && <PersonInfo person={currPerson} />}
-            <PersonPageGrid title={clubTitle} people={clubPeople} changePerson={changePerson} />
+            <PersonGrid title={clubTitle} people={clubPeople} changePerson={changePerson} />
             <a href="#heading"><ClubsGrid className="clubs-grid" /></a>
         </>
     );

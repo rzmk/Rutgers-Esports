@@ -6,7 +6,6 @@ function SocialsBar({ socials }) {
     return (
         <div>
             {socials && Object.entries(socials).map(([key, value]) => (
-                // eslint-disable-next-line jsx-a11y/control-has-associated-label
                 <span className="socials">
                     <a href={`${value}`} target="_blank" rel="noopener noreferrer"><i className={`fab fa-${key} fa-3x`} /></a>
                 </span>

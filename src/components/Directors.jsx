@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import HeroSection from './HeroSection';
 import PersonInfo from './PersonInfo';
-import PersonPageGrid from './PersonPageGrid';
 import directors from '../data/directorsdata';
 import './Directors.css';
-import isClubPage from './isClubPage';
+import PersonGrid from './PersonGrid';
 
 function Directors() {
     const {
@@ -30,8 +29,6 @@ function Directors() {
         scrollToTop();
     };
 
-    isClubPage.isClubPage = false;
-
     return (
         <>
             <HeroSection
@@ -41,7 +38,7 @@ function Directors() {
                 videoSourceURL={videoSourceURL}
             />
             <PersonInfo person={currPerson} />
-            <PersonPageGrid title="MEET OUR DIRECTORS" people={directors.directors} changePerson={changePerson} />
+            <PersonGrid title="MEET OUR DIRECTORS" people={directors.directors} changePerson={changePerson} />
         </>
     );
 }

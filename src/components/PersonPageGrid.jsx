@@ -11,12 +11,12 @@ function PersonPageGrid({ title, people, changePerson }) {
     return (
         <div className="pb-5">
             <div className="title pt-0">{title}</div>
-            <Grid container className="mx-auto" md={6} spacing={6} style={{ justifyContent: 'center' }}>
+            <Grid container className="mx-auto" md={6} spacing={6}>
                 {people.map((person) => (
                     <Grid item xs={8} sm={4} md={4}>
                         <div>
                             <a href="#heading">
-                                <div className="peopleContainer personTab personBox" onClick={() => changePerson(person)} style={{ position: 'relative', zIndex: 0 }}>
+                                <div className="personTab" onClick={() => changePerson(person)} style={{ position: 'relative', zIndex: 0 }}>
                                     <div style={{ bottom: '0%', position: 'absolute', zIndex: 1 }}>
                                         <p className="personName">
                                             {' '}
