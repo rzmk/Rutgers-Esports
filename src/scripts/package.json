@@ -10,6 +10,6 @@
   "author": "sriRacha21",
   "license": "ISC",
   "dependencies": {
-    "ytdl-core": "^4.4.5"
+    "ytdl-core": "^4.8.3"
   }
 }
