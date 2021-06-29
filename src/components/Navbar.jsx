@@ -19,10 +19,6 @@ const scrollToTop = () => {
     });
 };
 
-const redirect = (page) => {
-    window.location.href = `/${page}`;
-};
-
 const disappear = (dropdownType, club = '') => {
     const dropdown = `dropdown-${dropdownType}`;
     document.getElementById(dropdown).style.visibility = 'hidden';
@@ -77,7 +73,7 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link to="/clubs" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('clubs')} id="navbarDropdown-clubs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={() => { scrollToTop(); redirect('clubs'); }}>
+                            <Link to="/clubs" className="nav-link dropdown-toggle text-truncate" onMouseEnter={() => appear('clubs')} id="navbarDropdown-clubs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={() => { scrollToTop(); }}>
                                 Clubs
                             </Link>
                             <div className="dropdown-menu fade-down" aria-labelledby="navbarDropdown" id="dropdown-clubs" onMouseLeave={() => disappear('clubs', 'noscroll')}>

@@ -1,6 +1,7 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Carousel, { autoplayPlugin } from '@brainhubeu/react-carousel';
+// import Carousel, { autoplayPlugin } from '@brainhubeu/react-carousel';
 import SocialsBar from './SocialsBar';
 import PersonGrid from './PersonGrid';
 import './Grid.css';
@@ -56,7 +57,7 @@ function ClubsGrid() {
                             Filler
                         </div>
                         <div className="popUpContainer">
-                            <div className="popUpHeader row">
+                            <div className="popUpHeader row mx-0">
                                 <div
                                     className="exitPop col-sm-12"
                                     onClick={() => visibility(clubPop)}
@@ -67,20 +68,20 @@ function ClubsGrid() {
                                     Exit Pop &nbsp;
                                     <i className="fas fa-times" />
                                 </div>
-                                <div className="orgTitle col-12">
+                                <div className="orgTitle pt-5 col-12">
                                     <p>{clubPop.name}</p>
                                 </div>
                             </div>
-                            <div>
+                            {/* <div>
                                 <Carousel plugins={['infinite', { resolve: autoplayPlugin, options: { interval: 4000 } }]} animationSpeed={1000}>
                                     {clubPop.pictures.map((pic) => (
 
                                         <img className="orgPicture" src={pic} alt={clubPop.name} />
                                     ))}
                                 </Carousel>
-                            </div>
+                            </div> */}
 
-                            <div className="popUpBody">
+                            <div className="popUpBody pt-1">
                                 <div className="socialsBar">
                                     <SocialsBar flow="row-reverse" socials={clubPop.socials} />
                                 </div>
